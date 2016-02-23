@@ -1,0 +1,10 @@
+node_modules
+*.sw[po]
+npm-debug.log
+out
+screenshots
+test.log
+test/browser/features/support/*.js.map
+test/browser/features/support/*.js
+test/browser/features/step_definitions/*.js.map
+test/browser/features/step_definitions/*.js

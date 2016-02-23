@@ -1,0 +1,41 @@
+{
+  "name": "cbt-CHANGEME",
+  "version": "0.1.0",
+  "description": "",
+  "repository": "git@bitbucket.org:thejimmyg/cbt.git",
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "format": "esformatter --config esformatter.json --diff test/*.js",
+    "format:apply": "esformatter --config esformatter.json -i test/*.js",
+    "test-behaviour:build-watch": "./node_modules/.bin/babel -s --watch -d . test/browser/features/support/*.es6 test/browser/features/step_definitions/*.es6",
+    "bdd-tests": "node node_modules/.bin/cucumber.js -f pretty test/browser/features/*.feature"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "esformatter": "^0.8.1",
+    "istanbul": "^0.4.2"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "chai": "^3.4.1",
+    "cucumber": "~0.4.4",
+    "sanitize-filename": "~1.1.1",
+    "selenium-webdriver": "^2.46.1",
+    "wd": "^0.3.12",
+    "wd-bridge": "0.0.2"
+  }
+}
